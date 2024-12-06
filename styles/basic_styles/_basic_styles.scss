@@ -1,0 +1,80 @@
+@import "../fonts";
+$text: #0C2248;
+$link: #003CA0;
+$accent: #0064DC;
+$subtext: #939FC3;
+$error: #EC5946;
+$error_bg: #FEF3F1;
+$surface: #E3EDF7;
+$hover_second: #CFE1F3;
+$success: #439F6E;
+$white: #FFFFFF;
+$gradient: linear-gradient(90deg, #003CA0 50%, #1557C4 100%);
+$system_dark: #828282;
+
+
+*{
+  margin: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+}
+
+p,h1,h2,h3,h4,h5,h6{
+  color: $text;
+  font-family: sans-serif;
+  margin: 0;
+}
+
+.container-max-width{
+  max-width: 75%;
+  width: 100%;
+}
+
+a{
+  text-decoration: none;
+  color: $link;
+  &.with_underline{
+    text-decoration: underline;
+  }
+}
+
+.right_arrow{
+  rotate: -90deg;
+}
+.mg4{
+  margin-bottom: 4px;
+}
+.mg8{
+    margin-bottom: 8px;
+  }
+.mg12{
+    margin-bottom: 12px;
+  }
+.mg16{
+    margin-bottom: 16px;
+  }
+.mg24{
+    margin-bottom: 24px;
+  }
+.mg32{
+    margin-bottom: 32px;
+  }
+.mg40{
+    margin-bottom: 40px;
+  }
+.mg48{
+    margin-bottom: 48px;
+  }
+.mg56{
+    margin-bottom: 56px;
+  }
+.mg64{
+    margin-bottom: 64px;
+  }
+.mg80{
+    margin-bottom: 80px;
+  }
+.mg120{
+    margin-bottom: 120px;
+  }
