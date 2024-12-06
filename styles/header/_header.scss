@@ -28,9 +28,10 @@ header{
         p{
           color: $text;
           font-weight: 550;
+          font-size: 19px;
         }
         p:first-child{
-          font-size: 19px;
+          font-size: 21px;
         }
       }
     }
@@ -42,7 +43,7 @@ header{
         cursor: pointer;
         p{
           color: $link;
-          font-size: 16px;
+          font-size: 20px;
         }
         .button_log_in{
           cursor: inherit;
@@ -60,6 +61,58 @@ header{
             font-weight: 700;
           }
         }
+        &:last-child{
+          padding-left: 15px;
+        }
+      }
+    }
+  }
+}
+
+.search{
+  padding: 40px 0 ;
+  display: flex;
+  justify-content: center;
+  background: $gradient;
+  .container-max-width{
+    display: grid;
+    grid-template-columns: minmax(200px, 800px) repeat(2, minmax(200px, 1fr));
+    gap: 20px;
+    align-items: center;
+    .search-input{
+      width: 100%;
+      position: relative;
+      input{
+        width: 100%;
+        padding: 14px 16px;
+        background: $white;
+        border: none;
+        border-radius: 8px;
+        &:focus{
+          border: none;
+          outline: none;
+        }
+      }
+      img{
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+    div:not(:first-child){
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      background: #3368C0;
+      padding: 14px 20px ;
+      border-radius: 6px;
+      gap: 8px;
+      p{
+        color: $white;
+      }
+      .right_arrow{
+        filter: invert(100%) sepia(100%)  brightness(100%) ;
       }
     }
   }

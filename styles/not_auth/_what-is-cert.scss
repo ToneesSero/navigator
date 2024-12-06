@@ -1,0 +1,39 @@
+
+.what-is-cert{
+  display: flex;
+  justify-content: center;
+  background: rgba(243, 245, 251, 1);
+  .container-max-width{
+    padding: 80px 0;
+    .info{
+      position: relative;
+      padding: 52px 44px;
+      display: flex;
+      flex-direction: column;
+      gap: 44px;
+      border-radius: 8px;
+      background: $white;
+      .desc{
+        display: flex;
+        align-items: end;
+        .text{
+          width: 70%;
+          display: flex;
+          flex-direction: column;
+          gap: 14px;
+        }
+        .image{
+          position: absolute;
+          right: 13%;
+          display: flex;
+          justify-content: center;
+          height: 100%;
+          align-items: end;
+          img{
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

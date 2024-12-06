@@ -20,10 +20,14 @@ $system_dark: #828282;
   outline: none;
 }
 
+
 p,h1,h2,h3,h4,h5,h6{
   color: $text;
-  font-family: sans-serif;
+  font-family: "Golos Text SemiBold";
   margin: 0;
+}
+h1,h2,h3,h4,h5,h6{
+  font-family: "Golos Text Bold";
 }
 
 .container-max-width{
