@@ -23,7 +23,7 @@ $system_dark: #828282;
 
 p,h1,h2,h3,h4,h5,h6{
   color: $text;
-  font-family: "GolosText-SemiBold";
+  font-family: "GolosText-Regular";
   margin: 0;
 }
 h1,h2,h3,h4,h5,h6{
@@ -34,14 +34,47 @@ h1,h2,h3,h4,h5,h6{
   max-width: 75%;
   width: 100%;
 }
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi),(max-device-width: (1300*2)px) {
+  .container-max-width{
+    max-width: 85%;
+    width: 100%;
+  }
+}
 
 a{
+  font-family: GolosText-Regular;
+  cursor: pointer;
   text-decoration: none;
   color: $link;
   &.with_underline{
     text-decoration: underline;
   }
 }
+
+input{
+  padding: 10px;
+  border-radius: 6px;
+}
+button{
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 15px 20px;
+  &.blue-button{
+    background: $accent;
+    color: $white;
+  //  todo: проверить соответствие цветов
+  }
+  &.white-button{
+    background: $white;
+    color: $link;
+  }
+  &.light-blue-button{
+    background: $surface;
+    color: $link;
+  }
+}
+
+
 
 .right_arrow{
   rotate: -90deg;

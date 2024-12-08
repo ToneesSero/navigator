@@ -1,0 +1,63 @@
+.for-parents{
+  display: flex;
+  justify-content: center;
+  background: $surface;
+  .container-max-width{
+    padding: 40px 0;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 30px;
+    .sch-info{
+      background: $white;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      border-radius: 8px;
+      height: max-content;
+      padding: 15px 25px;
+      .sch-info_el{
+        cursor: pointer;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+      }
+    }
+    .info-for-parents{
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      .breadcrumbs{
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .contacts-us-elements{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        .contacts-us-el{
+          width: 65%;
+          cursor: pointer;
+          background: $white;
+          border-radius: 6px;
+          padding: 20px 30px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          transition: transform .4s ease-in-out;
+          .contacts-us-el-text{
+            display: flex;
+            gap: 8px;
+            align-items: center;
+          }
+          &:hover{
+            transform: translateX(20px);
+            transition: transform .4s ease-in-out;
+          }
+        }
+      }
+    }
+  }
+}

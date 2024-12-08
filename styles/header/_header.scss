@@ -68,6 +68,33 @@ header{
     }
   }
 }
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi),(max-device-width: (1300*2)px) {
+  header{
+    .container-max-width{
+      .logo_img{
+        .logo_header_text{
+          p{
+            color: $text;
+            font-weight: 550;
+            font-size: 15px;
+          }
+          p:first-child{
+            font-size: 17px;
+          }
+        }
+      }
+      .logo_menu{
+        gap: 16px;
+        .logo_menu_el{
+          p{
+            white-space: nowrap;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
 
 .search{
   padding: 40px 0 ;

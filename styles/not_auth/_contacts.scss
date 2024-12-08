@@ -1,0 +1,74 @@
+.contacts{
+  background: $surface;
+  display: flex;
+  justify-content: center;
+  .container-max-width{
+    padding: 40px 0;
+    padding-right: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    .breadcrumbs{
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .contacts_info{
+      display: grid;
+      gap: 60px;
+      grid-template-columns: 1fr 1fr;
+
+      .contacts-us{
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+
+        .contacts-us-elements{
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          .contacts-us-el{
+            cursor: pointer;
+            background: $white;
+            border-radius: 6px;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: transform .4s ease-in-out;
+            .contacts-us-el-text{
+              display: flex;
+              gap: 8px;
+              align-items: center;
+            }
+            &:hover{
+              transform: translateX(20px);
+              transition: transform .4s ease-in-out;
+            }
+          }
+        }
+
+      }
+      .write-us{
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        .write-us_form{
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          align-items: end;
+
+          input{
+            width: 100%;
+          }
+
+          button{
+            width: max-content;
+          }
+        }
+      }
+    }
+  }
+}
