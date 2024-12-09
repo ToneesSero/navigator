@@ -11,6 +11,7 @@ $success: #439F6E;
 $white: #FFFFFF;
 $gradient: linear-gradient(90deg, #003CA0 50%, #1557C4 100%);
 $system_dark: #828282;
+$bg_main: #f7fbff;
 
 
 *{
@@ -51,10 +52,6 @@ a{
   }
 }
 
-input{
-  padding: 10px;
-  border-radius: 6px;
-}
 button{
   cursor: pointer;
   border-radius: 8px;

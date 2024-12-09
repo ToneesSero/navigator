@@ -21,17 +21,10 @@
           width:100%;
           display: flex;
           flex-direction: column;
-          select{
-            border: 1px solid $system_dark;
-          }
-          input{
-            border: 1px solid $system_dark;
-          }
           .checkbox{
             display: flex;
             gap: 10px;
             align-items: center;
-
           }
 
           &:last-child{

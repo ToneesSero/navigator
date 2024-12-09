@@ -1,0 +1,108 @@
+
+//select
+.dropdown-toggle.btn-light.btn-light{
+  padding: 12px 16px;
+  background: #ffffff;
+  color: $text;
+  border: 1px solid $surface;
+  &:hover{
+    border: 1px solid $accent;
+    background: $white;
+  }
+  &:focus{
+    border: 1px solid $accent;
+    background: $white;
+  }
+  &:active{
+    border: 1px solid $accent;
+    background: $white;
+  }
+}
+
+.dropdown.error .dropdown-toggle.btn-light.btn-light.btn-light{
+  border: 1px solid $error;
+}
+
+.filter_el{
+  .dropdown.dropdown.dropdown{
+    width: unset;
+  }
+}
+
+.dropdown-toggle::after{
+  border: none;
+  content: "";
+  width: 20px;
+  height: 10px;
+  background: url("../../images/arrow_without.svg") no-repeat;
+  transform: translateY(2px);
+}
+.dropdown-menu.dropdown-menu.dropdown-menu{
+  li{
+
+    a.dropdown-item{
+      background: #FFFFFF;
+      color: $text ;
+      &.active{
+        color: $text !important;
+        &:before{
+          background: url("../../images/checkbox.svg") no-repeat center center;
+        }
+      }
+      &:hover{
+        background: $bg_main;
+        color: $accent;
+        &:before{
+          border: 1px solid $accent;
+        }
+      }
+      &:before{
+        display: inline-block;
+        content: "";
+        width: 20px;
+        height: 20px;
+        background: rgba(0,0,0,0);
+        border: 1px solid #939fc3;
+        border-radius: 4px;
+        margin-right: 10px;
+        transform: translateY(4px);
+      }
+    }
+  }
+}
+
+// checkbox
+input[type="checkbox"].form-control.form-control{
+  width: max-content !important;
+}
+//input
+input{
+  padding: 10px;
+  border-radius: 6px;
+}
+
+
+
+
+// filters
+.filters{
+  .filter_el{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    input{
+      border: 1px solid $surface;
+      transition: border .4s ease-in-out;
+      &:focus{
+        border: 1px solid $accent;
+        transition: border .4s ease-in-out;
+      }
+      &:hover{
+        transition: border .4s ease-in-out;
+        border: 1px solid $accent;
+      }
+    }
+
+  }
+
+}
