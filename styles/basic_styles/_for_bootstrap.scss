@@ -167,6 +167,13 @@ input[type="checkbox"]:checked + .custom-control-label.custom-control-label.cust
 input{
   padding: 10px;
   border-radius: 6px;
+  border: 1px solid $surface;
+  &:hover, &:focus, &:active{
+    border: 1px solid $accent
+  }
+  &.error{
+    border: 1px solid $error;
+  }
 }
 
 

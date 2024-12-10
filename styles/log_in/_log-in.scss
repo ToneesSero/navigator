@@ -1,0 +1,29 @@
+.log_in{
+  background: $surface;
+  display: flex;
+  justify-content: center;
+  .container-max-width{
+    padding: 80px 0;
+    display: flex;
+    justify-content: center;
+    .log_in_container{
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      background: $white;
+      border-radius: 6px;
+      padding: 55px 90px;
+      box-shadow: 1px 5px 5px #A7BDE133;
+
+      .log_in_element.input{
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        label{
+          cursor: pointer;
+          color: $subtext;
+        }
+      }
+    }
+  }
+}

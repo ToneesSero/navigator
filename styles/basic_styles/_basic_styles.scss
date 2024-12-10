@@ -14,6 +14,8 @@ $system_dark: #828282;
 $bg_main: #f7fbff;
 $system_light: #e5e5e5;
 
+$basic_shadow: 1px 4px 5px #A7BDE133;
+
 
 *{
   margin: 0;
@@ -69,6 +71,10 @@ button{
   &.light-blue-button{
     background: $surface;
     color: $link;
+  }
+  &.black-blue-button{
+    background: $link;
+    color: $white;
   }
 }
 
