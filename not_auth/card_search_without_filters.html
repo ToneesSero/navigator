@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../libs/jquery/jquery-1.10.2.js"></script>
+    <script src="../libs/jquery/jquery.slim.min.js"></script>
+    <script src="../libs/bootstrap/bootstrap.bundle.min.js"></script>
+
+
+    <link rel="stylesheet" href="../libs/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../libs/bootstrap/bootstrap-select/css/bootstrap-select.css">
+    <link rel="stylesheet" href="../libs/bootstrap/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="../styles/main.min.css">
+</head>
+<body>
+<header >
+    <div class="container-max-width">
+        <a href="#" class="logo_img">
+            <img src="../images/logo.svg">
+            <div class="logo_header_text">
+                <p>Навигатор дополнительного образования</p>
+                <p>Оренбургской области</p>
+            </div>
+        </a>
+        <div class="logo_menu">
+            <div class="logo_menu_el active">
+                <p>Главная</p>
+            </div>
+            <div class="logo_menu_el">
+                <p>О сертификате</p>
+            </div>
+            <div class="logo_menu_el">
+                <p >Поставщикам услуг</p>
+            </div>
+            <div class="logo_menu_el">
+                <p >Картотека</p>
+            </div>
+            <div class="logo_menu_el">
+                <p >Родителям</p>
+            </div>
+            <div class="logo_menu_el">
+                <p >Обратная связь</p>
+            </div>
+            <div class="logo_menu_el">
+                <button class="button_log_in">Войти <img src="../images/arrow_without.svg" alt="arrow-without"></button>
+            </div>
+        </div>
+    </div>
+</header>
+<section class="search">
+    <div class="container-max-width">
+        <div class="search-input" >
+            <input placeholder="Начните вводить программу, организацию или мероприятие" />
+            <img src="../images/icon_search.svg" alt="search">
+        </div>
+        <div class="search-card" >
+            <img src="../images/file_search.svg" alt="file_search">
+            <p>Поиск по картотеке</p>
+            <img src="../images/arrow_without.svg" alt="right_arrow" class="right_arrow">
+        </div>
+        <div class="search-map" >
+            <img src="../images/map.svg" alt="map">
+            <p>Поиск по карте</p>
+            <img src="../images/arrow_without.svg" alt="right_arrow" class="right_arrow">
+        </div>
+    </div>
+</section>
+<section class="search_card">
+    <div class="container-max-width">
+        <div class="container_info">
+            <div class="filters hide">
+                <div class="filters_header">
+                    <h3>Фильтры <span>4</span></h3>
+                    <div id="show_hide_button">
+                        <img src="../images/arrow_without.svg" alt="" class="right_arrow">
+                    </div>
+                </div>
+                <div class="filter_el">
+                    <label for="municial">Муниципалитет</label>
+                    <select id="municial" class="selectpicker error">
+                        <option>Любой</option>
+                        <option>Любой1</option>
+                        <option>Любойqqqqqqqqqqqqqqqqq2</option>
+                    </select>
+                </div>
+                <div class="filter_el">
+                    <label for="organisation">Организация</label>
+                    <input id="organisation" class=""/>
+                </div>
+                <div class="filter_el">
+                    <label for="direction">Направленность</label>
+                    <select id="direction" class="selectpicker">
+                        <option>Любая</option>
+                    </select>
+                </div>
+                <div class="filter_el">
+                    <label for="profile">Профиль</label>
+                    <select id="profile" class="selectpicker">
+                        <option>Любой</option>
+                    </select>
+                </div>
+                <div class="filter_el">
+                    <label for="child_age">Возраст ребенка</label>
+                    <input id="child_age" class=""/>
+                </div>
+                <div class="filter_el">
+                    <label for="price">Стоимость</label>
+                    <select id="price" class="selectpicker">
+                        <option>Любая</option>
+                    </select>
+                </div>
+                <div class="filter_el">
+                    <label for="sign_difference">Знаки отличия</label>
+                    <input id="sign_difference" class="form-control" type="text"/>
+                </div>
+                <div class="filter_el checkboxs">
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="is_OVZ">
+                        <label class="custom-control-label" for="is_OVZ">для детей с ОВЗ</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="is_Open">
+                        <label class="custom-control-label" for="is_Open">приём заявок открыт</label>
+                    </div>
+                </div>
+                <div class="filter_el">
+                    <button class="white-button">Сбросить</button>
+                    <button class="light-blue-button">Применить</button>
+                </div>
+            </div>
+            <div class="block_info">
+                <h2> <span class="btn"><img src="../images/arrow_without.svg" class="right_arrow"></span> Результаты поиска <span class="info">13193</span></h2>
+                <div class="blocks">
+                    <div class="block_inline">
+                        <div class="block_el">
+                            <div class="favorites">
+                                <img src="../images/favourites_icon.svg">
+                            </div>
+                            <img src="../images/logo_block.png" alt="logo_block">
+                            <h4>ДООП “Да здравствует игра!”</h4>
+                            <p>Дополнительная общеобразовательная общеразвивающая программа «Да здравствует игра» имеет  <b>социально-гуманитарную</b> направленность и реализуется в сфере дополнительного образования...</p>
+                            <div class="types">
+                                <div class="type yellow">от 11 до 13 лет</div>
+                                <div class="type blue">Очная</div>
+                                <div class="type light-blue">По сертификату рф</div>
+                                <div class="type purple">Без ОВЗ</div>
+                                <div class="type green">Принимаются сертификаты</div>
+                            </div>
+                            <a href="https://dop.edu.orb.ru/org/portfolio/70504" class="with_underline">Муниципальное автономное учреждение дополнительного образования "Центр детского творчества" Промышленного района</a>
+                        </div>
+                    </div>
+                    <div class="block_inline">
+                        <div class="block_el">
+                            <div class="favorites">
+                                <img src="../images/favourites_icon.svg">
+                            </div>
+                            <h4>Программа лагеря дневного пребывания “Время первых: Создав...</h4>
+                            <p>Профильная смена, в особенности в сфере культуры и искусства, предоставит уникальную возможность подросткам погрузиться в мир креативности, вдохновения и самовыражения. Участники смогут...</p>
+                            <div class="types">
+                                <div class="type yellow">от 3 до 18 лет</div>
+                                <div class="type blue">Очная</div>
+                                <div class="type light-blue">Бюджетная</div>
+                                <div class="type purple">Без ОВЗ</div>
+                            </div>
+                            <a href="https://dop.edu.orb.ru/org/portfolio/70504" class="with_underline">МБУДО "ЦДО Октябрьского района"</a>
+                        </div>
+                    </div>
+                    <div class="block_inline">
+                        <div class="block_el">
+                            <div class="favorites">
+                                <img src="../images/favourites_icon.svg">
+                            </div>
+                            <h4>Программа лагеря дневного пребывания “Время первых: Создав...</h4>
+                            <p>Профильная смена, в особенности в сфере культуры и искусства, предоставит уникальную возможность подросткам погрузиться в мир креативности, вдохновения и самовыражения. Участники смогут...</p>
+                            <div class="types">
+                                <div class="type yellow">от 3 до 18 лет</div>
+                                <div class="type blue">Очная</div>
+                                <div class="type light-blue">Бюджетная</div>
+                                <div class="type purple">Без ОВЗ</div>
+                            </div>
+                            <a href="https://dop.edu.orb.ru/org/portfolio/70504" class="with_underline">МБУДО "ЦДО Октябрьского района"</a>
+                        </div>
+                    </div>
+                    <div class="block_inline">
+                        <div class="block_el">
+                            <div class="favorites">
+                                <img src="../images/favourites_icon.svg">
+                            </div>
+                            <h4>Весёлые цифры</h4>
+                            <p>Программа творческого объединения по математике «Весёлые цифры» разработана в  соответствии с Федеральным законом от 29.12.2012 г. № 273-ФЗ «Об образовании в Российской Федерации»...</p>
+                            <div class="types">
+                                <div class="type yellow">от 3 до 18 лет</div>
+                                <div class="type blue">Очная</div>
+                                <div class="type light-blue">Бюджетная</div>
+                                <div class="type purple">Без ОВЗ</div>
+                            </div>
+                            <a href="https://dop.edu.orb.ru/org/portfolio/70504" class="with_underline">Муниципальное общеобразовательное бюджетное учреждение "Староалександровская основная общеобразовательная школа" Бузулукского района Оренбургской области</a>
+                        </div>
+                    </div>
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer>
+    <div class="container-max-width">
+        <div class="logo_footer">
+            <a href="#" class="logo_img">
+                <img src="../images/logo_blue.svg">
+                <div class="logo_footer_text">
+                    <p>Навигатор дополнительного образования</p>
+                    <p>Оренбургской области</p>
+                </div>
+            </a>
+        </div>
+
+        <a href="#" class="with_underline">©️Министерство образования Оренбургской области, 2024</a>
+    </div>
+</footer>
+<script src="../libs/bootstrap/bootstrap-wysihtml5/bootstrap-wysihtml5-0.0.2.min.js"></script>
+<script src="../libs/bootstrap/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+<script src="../libs/bootstrap/bootstrap-select/js/bootstrap-select.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Map</title>
+    <script src="../libs/jquery/jquery-1.10.2.js"></script>
+    <script src="../libs/jquery/jquery.slim.min.js"></script>
+    <script src="../libs/bootstrap/bootstrap.bundle.min.js"></script>
+
+
+    <link rel="stylesheet" href="../libs/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../libs/bootstrap/bootstrap-select/css/bootstrap-select.css">
+    <link rel="stylesheet" href="../libs/bootstrap/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="../styles/main.min.css">
+</head>
+<body>
+<header >
+    <div class="container-max-width">
+        <a href="#" class="logo_img">
+            <img src="../images/logo.svg">
+            <div class="logo_header_text">
+                <p>Навигатор дополнительного образования</p>
+                <p>Оренбургской области</p>
+            </div>
+        </a>
+        <div class="logo_menu">
+            <div class="logo_menu_el active">
+                <p>Главная</p>
+            </div>
+            <div class="logo_menu_el">
+                <p>О сертификате</p>
+            </div>
+            <div class="logo_menu_el">
+                <p >Поставщикам услуг</p>
+            </div>
+            <div class="logo_menu_el">
+                <p >Картотека</p>
+            </div>
+            <div class="logo_menu_el">
+                <p >Родителям</p>
+            </div>
+            <div class="logo_menu_el">
+                <p >Обратная связь</p>
+            </div>
+            <div class="logo_menu_el">
+                <button class="button_log_in">Войти <img src="../images/arrow_without.svg" alt="arrow-without"></button>
+            </div>
+        </div>
+    </div>
+</header>
+<section class="search">
+    <div class="container-max-width">
+        <div class="search-input" >
+            <input placeholder="Начните вводить программу, организацию или мероприятие" />
+            <img src="../images/icon_search.svg" alt="search">
+        </div>
+        <div class="search-card" >
+            <img src="../images/file_search.svg" alt="file_search">
+            <p>Поиск по картотеке</p>
+            <img src="../images/arrow_without.svg" alt="right_arrow" class="right_arrow">
+        </div>
+        <div class="search-map" >
+            <img src="../images/map.svg" alt="map">
+            <p>Поиск по карте</p>
+            <img src="../images/arrow_without.svg" alt="right_arrow" class="right_arrow">
+        </div>
+    </div>
+</section>
+<section class="map">
+    <div class="container-max-width">
+            <div class="filters">
+                <div class="filters_header">
+                    <h3>Фильтры <span>4</span></h3>
+                    <div id="show_hide_button">
+                        <img src="../images/arrow_without.svg" alt="" class="right_arrow">
+                    </div>
+                </div>
+                <div class="filter_el">
+                    <label for="municial">Муниципалитет</label>
+                    <select id="municial" class="selectpicker error">
+                        <option>Любой</option>
+                        <option>Любой1</option>
+                        <option>Любойqqqqqqqqqqqqqqqqq2</option>
+                    </select>
+                </div>
+                <div class="filter_el">
+                    <label for="organisation">Организация</label>
+                    <input id="organisation" class=""/>
+                </div>
+                <div class="filter_el">
+                    <label for="direction">Направленность</label>
+                    <select id="direction" class="selectpicker">
+                        <option>Любая</option>
+                    </select>
+                </div>
+                <div class="filter_el">
+                    <label for="profile">Профиль</label>
+                    <select id="profile" class="selectpicker">
+                        <option>Любой</option>
+                    </select>
+                </div>
+                <div class="filter_el">
+                    <label for="child_age">Возраст ребенка</label>
+                    <input id="child_age" class=""/>
+                </div>
+                <div class="filter_el">
+                    <label for="price">Стоимость</label>
+                    <select id="price" class="selectpicker">
+                        <option>Любая</option>
+                    </select>
+                </div>
+                <div class="filter_el">
+                    <label for="sign_difference">Знаки отличия</label>
+                    <input id="sign_difference" class="form-control" type="text"/>
+                </div>
+                <div class="filter_el checkboxs">
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="is_OVZ">
+                        <label class="custom-control-label" for="is_OVZ">для детей с ОВЗ</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="is_Open">
+                        <label class="custom-control-label" for="is_Open">приём заявок открыт</label>
+                    </div>
+                </div>
+                <div class="filter_el">
+                    <button class="white-button">Сбросить</button>
+                    <button class="light-blue-button">Применить</button>
+                </div>
+            </div>
+            <div class="map_contain">
+            </div>
+    </div>
+</section>
+<footer>
+    <div class="container-max-width">
+        <div class="logo_footer">
+            <a href="#" class="logo_img">
+                <img src="../images/logo_blue.svg">
+                <div class="logo_footer_text">
+                    <p>Навигатор дополнительного образования</p>
+                    <p>Оренбургской области</p>
+                </div>
+            </a>
+        </div>
+
+        <a href="#" class="with_underline">©️Министерство образования Оренбургской области, 2024</a>
+    </div>
+</footer>
+
+</body>
+
+<script src="../libs/bootstrap/bootstrap-wysihtml5/bootstrap-wysihtml5-0.0.2.min.js"></script>
+<script src="../libs/bootstrap/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+<script src="../libs/bootstrap/bootstrap-select/js/bootstrap-select.js"></script>
+</html>

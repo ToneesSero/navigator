@@ -3,7 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <script src="../libs/jquery/jquery-1.10.2.js"></script>
+    <script src="../libs/jquery/jquery.slim.min.js"></script>
+    <script src="../libs/bootstrap/bootstrap.bundle.min.js"></script>
+
+
+    <link rel="stylesheet" href="../libs/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../libs/bootstrap/bootstrap-select/css/bootstrap-select.css">
+    <link rel="stylesheet" href="../libs/bootstrap/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css">
     <link rel="stylesheet" href="../styles/main.min.css">
 </head>
 <body>
@@ -63,53 +70,59 @@
     <div class="container-max-width">
         <div class="container_info">
             <div class="filters">
-                <h3>Фильтры <span>4</span></h3>
+                <div class="filters_header">
+                    <h3>Фильтры <span>4</span></h3>
+                    <div id="show_hide_button">
+                        <img src="../images/arrow_without.svg" alt="" class="right_arrow">
+                    </div>
+                </div>
                 <div class="filter_el">
-                    <label>Муниципалитет</label>
-                    <select class="form-control">
+                    <label for="municial">Муниципалитет</label>
+                    <select id="municial" class="selectpicker error">
                         <option>Любой</option>
+                        <option>Любой1</option>
+                        <option>Любойqqqqqqqqqqqqqqqqq2</option>
                     </select>
                 </div>
                 <div class="filter_el">
-                    <label>Организация</label>
-                    <input class="form-control"/>
+                    <label for="organisation">Организация</label>
+                    <input id="organisation" class=""/>
                 </div>
                 <div class="filter_el">
-                    <label>Направленность</label>
-                    <select class="form-control">
+                    <label for="direction">Направленность</label>
+                    <select id="direction" class="selectpicker">
                         <option>Любая</option>
                     </select>
                 </div>
                 <div class="filter_el">
-                    <label>Профиль</label>
-                    <select class="form-control">
+                    <label for="profile">Профиль</label>
+                    <select id="profile" class="selectpicker">
                         <option>Любой</option>
                     </select>
                 </div>
                 <div class="filter_el">
-                    <label>Возраст ребенка</label>
-                    <input class="form-control"/>
+                    <label for="child_age">Возраст ребенка</label>
+                    <input id="child_age" class=""/>
                 </div>
                 <div class="filter_el">
-                    <label>Стоимость</label>
-                    <select class="form-control">
+                    <label for="price">Стоимость</label>
+                    <select id="price" class="selectpicker">
                         <option>Любая</option>
                     </select>
                 </div>
                 <div class="filter_el">
-                    <label>Знаки отличия</label>
-                    <input class="form-control" type="text"/>
+                    <label for="sign_difference">Знаки отличия</label>
+                    <input id="sign_difference" class="form-control" type="text"/>
                 </div>
-                <div class="filter_el">
-                    <div class="checkbox">
-                        <input class="form-control" type="checkbox"/>
-                        <label >для детей с ОВЗ</label>
+                <div class="filter_el checkboxs">
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="is_OVZ">
+                        <label class="custom-control-label" for="is_OVZ">для детей с ОВЗ</label>
                     </div>
-                    <div class="checkbox">
-                        <input type="checkbox" class="form-control"/>
-                        <label >приём заявок открыт</label>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="is_Open">
+                        <label class="custom-control-label" for="is_Open">приём заявок открыт</label>
                     </div>
-
                 </div>
                 <div class="filter_el">
                     <button class="white-button">Сбросить</button>
@@ -117,54 +130,78 @@
                 </div>
             </div>
             <div class="block_info">
-                <h2>Результаты поиска <span>13193</span></h2>
+                <h2>Результаты поиска <span class="info">13193</span></h2>
                 <div class="blocks">
-                    <div class="block_el">
-                        <img src="../images/logo_block.png" alt="logo_block">
-                        <h4>ДООП “Да здравствует игра!”</h4>
-                        <p>Дополнительная общеобразовательная общеразвивающая программа «Да здравствует игра» имеет  <b>социально-гуманитарную</b> направленность и реализуется в сфере дополнительного образования...</p>
-                        <div class="types">
-                            <div class="type yellow"></div>
-                            <div class="type blue"></div>
-                            <div class="type light-blue"></div>
-                            <div class="type purple"></div>
-                            <div class="type green"></div>
+                    <div class="block_inline">
+                        <div class="block_el">
+                            <div class="favorites">
+                                <img src="../images/favourites_icon.svg">
+                            </div>
+                            <img src="../images/logo_block.png" alt="logo_block">
+                            <h4>ДООП “Да здравствует игра!”</h4>
+                            <p>Дополнительная общеобразовательная общеразвивающая программа «Да здравствует игра» имеет  <b>социально-гуманитарную</b> направленность и реализуется в сфере дополнительного образования...</p>
+                            <div class="types">
+                                <div class="type yellow">от 11 до 13 лет</div>
+                                <div class="type blue">Очная</div>
+                                <div class="type light-blue">По сертификату рф</div>
+                                <div class="type purple">Без ОВЗ</div>
+                                <div class="type green">Принимаются сертификаты</div>
+                            </div>
+                            <a href="https://dop.edu.orb.ru/org/portfolio/70504" class="with_underline">Муниципальное автономное учреждение дополнительного образования "Центр детского творчества" Промышленного района</a>
                         </div>
-                        <a href="https://dop.edu.orb.ru/org/portfolio/70504" class="with_underline">Муниципальное автономное учреждение дополнительного образования "Центр детского творчества" Промышленного района</a>
                     </div>
-                    <div class="block_el">
-                        <h4>Программа лагеря дневного пребывания “Время первых: Создав...</h4>
-                        <p>Профильная смена, в особенности в сфере культуры и искусства, предоставит уникальную возможность подросткам погрузиться в мир креативности, вдохновения и самовыражения. Участники смогут...</p>
-                        <div class="types">
-                            <div class="type yellow"></div>
-                            <div class="type blue"></div>
-                            <div class="type light-blue"></div>
-                            <div class="type purple"></div>
+                    <div class="block_inline">
+                        <div class="block_el">
+                            <div class="favorites">
+                                <img src="../images/favourites_icon.svg">
+                            </div>
+                            <h4>Программа лагеря дневного пребывания “Время первых: Создав...</h4>
+                            <p>Профильная смена, в особенности в сфере культуры и искусства, предоставит уникальную возможность подросткам погрузиться в мир креативности, вдохновения и самовыражения. Участники смогут...</p>
+                            <div class="types">
+                                <div class="type yellow">от 11 до 15 лет</div>
+                                <div class="type blue">Очная</div>
+                                <div class="type light-blue">Бюджетная</div>
+                                <div class="type purple">Без ОВЗ</div>
+                            </div>
+                            <a href="https://dop.edu.orb.ru/org/portfolio/70504" class="with_underline">МБУДО "ЦДО Октябрьского района"</a>
                         </div>
-                        <a href="https://dop.edu.orb.ru/org/portfolio/70504" class="with_underline">МБУДО "ЦДО Октябрьского района"</a>
                     </div>
-                    <div class="block_el">
-                        <h4>Программа “Шахматы”</h4>
-                        <p>XXI-й век — век информационного общества, век информационных технологий, поэтому интеллект является одним из наиболее значимых качеств личности. Как следствие — проблема интеллектуальног...</p>
-                        <div class="types">
-                            <div class="type yellow"></div>
-                            <div class="type blue"></div>
-                            <div class="type light-blue"></div>
-                            <div class="type purple"></div>
+                    <div class="block_inline">
+                        <div class="block_el">
+                            <div class="favorites">
+                                <img src="../images/favourites_icon.svg">
+                            </div>
+                            <h4>Программа “Шахматы”</h4>
+                            <p>XXI-й век — век информационного общества, век информационных технологий, поэтому интеллект является одним из наиболее значимых качеств личности. Как следствие — проблема интеллектуальног...</p>
+                            <div class="types">
+                                <div class="type yellow">От 10 до 14 лет </div>
+                                <div class="type blue">Очная</div>
+                                <div class="type light-blue">Бюджетная</div>
+                                <div class="type purple">Без ОВЗ</div>
+                            </div>
+                            <a href="https://dop.edu.orb.ru/org/portfolio/70504" class="with_underline">МБУДО "ДДТ" Сакмарского района</a>
                         </div>
-                        <a href="https://dop.edu.orb.ru/org/portfolio/70504" class="with_underline">МБУДО "ДДТ" Сакмарского района</a>
                     </div>
-                    <div class="block_el">
-                        <h4>Весёлые цифры</h4>
-                        <p>Программа творческого объединения по математике «Весёлые цифры» разработана в  соответствии с Федеральным законом от 29.12.2012 г. № 273-ФЗ «Об образовании в Российской Федерации»...</p>
-                        <div class="types">
-                            <div class="type yellow"></div>
-                            <div class="type blue"></div>
-                            <div class="type light-blue"></div>
-                            <div class="type purple"></div>
+                    <div class="block_inline">
+                        <div class="block_el">
+                            <div class="favorites">
+                                <img src="../images/favourites_icon.svg">
+                            </div>
+                            <h4>Весёлые цифры</h4>
+                            <p>Программа творческого объединения по математике «Весёлые цифры» разработана в  соответствии с Федеральным законом от 29.12.2012 г. № 273-ФЗ «Об образовании в Российской Федерации»...</p>
+                            <div class="types">
+                                <div class="type yellow">от 3 до 18 лет</div>
+                                <div class="type blue">Очная</div>
+                                <div class="type light-blue">Бюджетная</div>
+                                <div class="type purple">Без ОВЗ</div>
+                            </div>
+                            <a href="https://dop.edu.orb.ru/org/portfolio/70504" class="with_underline">Муниципальное общеобразовательное бюджетное учреждение "Староалександровская основная общеобразовательная школа" Бузулукского района Оренбургской области</a>
                         </div>
-                        <a href="https://dop.edu.orb.ru/org/portfolio/70504" class="with_underline">Муниципальное общеобразовательное бюджетное учреждение "Староалександровская основная общеобразовательная школа" Бузулукского района Оренбургской области</a>
                     </div>
+
+
+
+
                 </div>
             </div>
         </div>
@@ -185,9 +222,9 @@
         <a href="#" class="with_underline">©️Министерство образования Оренбургской области, 2024</a>
     </div>
 </footer>
-
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+<script src="../libs/bootstrap/bootstrap-wysihtml5/bootstrap-wysihtml5-0.0.2.min.js"></script>
+<script src="../libs/bootstrap/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+<script src="../libs/bootstrap/bootstrap-select/js/bootstrap-select.js"></script>
 
 </body>
 </html>
