@@ -42,6 +42,7 @@ header{
       .logo_menu_el{
         cursor: pointer;
         p{
+          white-space: nowrap;
           color: $link;
           font-size: 18px;
         }

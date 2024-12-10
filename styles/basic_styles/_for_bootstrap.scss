@@ -29,12 +29,18 @@
   }
 }
 
-.dropdown-toggle::after{
+.dropup .dropdown-toggle.dropdown-toggle::after{
   border: none;
+}
+.dropdown-toggle::after{
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: none;
   content: "";
   width: 20px;
   height: 10px;
-  background: url("../../images/arrow_without.svg") no-repeat;
+  background: url("../../images/arrow_without.svg") no-repeat center center;
   transform: translateY(2px);
 }
 .dropdown-menu.dropdown-menu.dropdown-menu{
@@ -75,6 +81,88 @@
 input[type="checkbox"].form-control.form-control{
   width: max-content !important;
 }
+
+//disabled
+input[type="checkbox"]:disabled + .custom-control-label.custom-control-label.custom-control-label{
+  cursor: not-allowed;
+  &:before{
+    border: none;
+    background: $system_light;
+  }
+  &:hover{
+    &:before{
+      border: none;
+      background: $system_light;
+    }
+  }
+}
+input[type="checkbox"]:disabled:checked + .custom-control-label.custom-control-label.custom-control-label{
+  cursor: not-allowed;
+  &:before,&:after{
+    border: none;
+    background-image: url("../../images/checkbox_dis.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  &:hover{
+    &:before,&:after{
+      border: none;
+      background-image: url("../../images/checkbox_dis.svg");
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+}
+// standart
+.custom-control-label.custom-control-label.custom-control-label{
+  cursor: pointer;
+  padding-left: 8px;
+  &:before{
+    top: unset;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 1px solid $subtext;
+  }
+  &:after{
+    top: 0;
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  &:hover{
+    &:before{
+      background: transparent;
+      border: 1px solid $accent;
+    }
+  }
+}
+.custom-checkbox.error{
+  .custom-control-label.custom-control-label.custom-control-label{
+    &:before{
+      border: 1px solid $error;
+    }
+  }
+}
+//checked
+
+
+input[type="checkbox"]:checked + .custom-control-label.custom-control-label.custom-control-label{
+  &:before, &:after{
+    border: none;
+    background-image: url("../../images/checkbox.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  &:hover{
+    &:before, &:after{
+      border: none;
+      background-image: url("../../images/checkbox_hover.svg");
+    }
+  }
+}
+
 //input
 input{
   padding: 10px;
