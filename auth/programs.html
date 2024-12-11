@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Log in</title>
+    <script src="../libs/jquery/jquery-1.10.2.js"></script>
+    <script src="../libs/jquery/jquery.slim.min.js"></script>
+    <script src="../libs/bootstrap/bootstrap.bundle.min.js"></script>
+
+
+    <link rel="stylesheet" href="../libs/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../libs/bootstrap/bootstrap-select/css/bootstrap-select.css">
+    <link rel="stylesheet" href="../libs/bootstrap/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="../styles/main.min.css">
+</head>
+<body>
+<header >
+    <div class="container-max-width">
+        <a href="#" class="logo_img">
+            <img src="../images/logo.svg">
+            <div class="logo_header_text">
+                <p>Навигатор дополнительного образования</p>
+                <p>Оренбургской области</p>
+            </div>
+        </a>
+        <div class="logo_menu">
+            <div class="logo_menu_el active">
+                <p>Главная</p>
+            </div>
+            <div class="logo_menu_el">
+                <p>О сертификате</p>
+            </div>
+            <div class="logo_menu_el">
+                <p >Поставщикам услуг</p>
+            </div>
+            <div class="logo_menu_el">
+                <p >Картотека</p>
+            </div>
+            <div class="logo_menu_el">
+                <p >Родителям</p>
+            </div>
+            <div class="logo_menu_el">
+                <p >Обратная связь</p>
+            </div>
+            <div class="logo_menu_el logged">
+                <button class="button_log_in"><img src="../images/personal_account/people_hover.svg" alt="people" class="people"> <img src="../images/arrow_without.svg" alt="arrow-without" class="arr"></button>
+                <div class="menu-logged">
+                    <div class="icon home">
+                        <img src="../images/home.svg" alt="home">
+                        <p>sch70132</p>
+                    </div>
+                    <div class="icon">
+                        <img src="../images/personal_account/people.svg" alt="people">
+                        <p>Профиль</p>
+                    </div>
+                    <div class="icon">
+                        <img src="../images/personal_account/menu.svg" alt="menu">
+                        <p>Мои программы</p>
+                    </div>
+                    <div class="icon">
+                        <img src="../images/personal_account/text_book.svg" alt="textbook">
+                        <p>Журналы ДО</p>
+                    </div>
+                    <div class="icon">
+                        <img src="../images/personal_account/card.svg" alt="card">
+                        <p>Сертификаты</p>
+                    </div>
+
+                    <div class="icon">
+                        <img src="../images/personal_account/dialog_window.svg" alt="dialog_window">
+                        <p>Заявки на обучение</p>
+                    </div>
+                    <div class="icon">
+                        <img src="../images/personal_account/folder.svg" alt="folder">
+                        <p>Заявки архивных подгрупп</p>
+                    </div>
+                    <div class="icon">
+                        <img src="../images/personal_account/letter.svg" alt="letter">
+                        <p>Уведомления</p>
+                    </div>
+                    <div class="icon">
+                        <img src="../images/personal_account/medal.svg" alt="medal">
+                        <p>Знаки отличия</p>
+                    </div>
+                    <div class="icon">
+                        <img src="../images/personal_account/check_mark.svg" alt="check_mark">
+                        <p>Экспертизы</p>
+                    </div>
+                    <div class="icon">
+                        <img src="../images/personal_account/report.svg" alt="report">
+                        <p>Система отчётности</p>
+                    </div>
+                    <div class="icon exit">
+                        <img src="../images/personal_account/exit.svg" alt="exit">
+                        <p>Выход</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+</header>
+<section class="search">
+    <div class="container-max-width">
+        <div class="search-input" >
+            <input placeholder="Начните вводить программу, организацию или мероприятие" />
+            <img src="../images/icon_search.svg" alt="search">
+        </div>
+        <div class="search-card" >
+            <img src="../images/file_search.svg" alt="file_search">
+            <p>Поиск по картотеке</p>
+            <img src="../images/arrow_without.svg" alt="right_arrow" class="right_arrow">
+        </div>
+        <div class="search-map" >
+            <img src="../images/map.svg" alt="map">
+            <p>Поиск по карте</p>
+            <img src="../images/arrow_without.svg" alt="right_arrow" class="right_arrow">
+        </div>
+    </div>
+</section>
+<section class="programs">
+    <div class="container-max-width">
+        <div class="menu-logged show">
+            <div class="icon home">
+                <img src="../images/home.svg" alt="home">
+                <p>sch70132</p>
+            </div>
+            <div class="icon">
+                <img src="../images/personal_account/people.svg" alt="people">
+                <p>Профиль</p>
+            </div>
+            <div class="icon active">
+                <img src="../images/personal_account/menu.svg" alt="menu">
+                <p>Мои программы</p>
+            </div>
+            <div class="icon">
+                <img src="../images/personal_account/text_book.svg" alt="textbook">
+                <p>Журналы ДО</p>
+            </div>
+            <div class="icon">
+                <img src="../images/personal_account/card.svg" alt="card">
+                <p>Сертификаты</p>
+            </div>
+
+            <div class="icon">
+                <img src="../images/personal_account/dialog_window.svg" alt="dialog_window">
+                <p>Заявки на обучение</p>
+            </div>
+            <div class="icon">
+                <img src="../images/personal_account/folder.svg" alt="folder">
+                <p>Заявки архивных подгрупп</p>
+            </div>
+            <div class="icon">
+                <img src="../images/personal_account/letter.svg" alt="letter">
+                <p>Уведомления</p>
+            </div>
+            <div class="icon">
+                <img src="../images/personal_account/medal.svg" alt="medal">
+                <p>Знаки отличия</p>
+            </div>
+            <div class="icon">
+                <img src="../images/personal_account/check_mark.svg" alt="check_mark">
+                <p>Экспертизы</p>
+            </div>
+            <div class="icon">
+                <img src="../images/personal_account/report.svg" alt="report">
+                <p>Система отчётности</p>
+            </div>
+            <div class="icon exit">
+                <img src="../images/personal_account/exit.svg" alt="exit">
+                <p>Выход</p>
+            </div>
+        </div>
+        <div class="programs-container">
+            <div class="breadcrumbs">
+                <p>Главная</p>
+                <img src="../images/arrow_without.svg" alt="arrow" class="right_arrow">
+                <p>Программы</p>
+            </div>
+
+            <h5>Список программ</h5>
+            <div class="but">
+                <button class="standart-button">Все программы</button>
+                <button class="green-button">Опубликовано</button>
+                <button class="gray-button">Архив</button>
+                <button class="yellow-button">Модерация</button>
+                <button class="red-button">На доработке</button>
+                <button class="black-blue-button img">Выгрузить в EXEL <img src="../images/download.svg" alt="download"></button>
+            </div>
+            <div class="table">
+                <table>
+                    <thead>
+                    <tr>
+                        <td>Код программы</td>
+                        <td>Наименование программы</td>
+                        <td>Статус</td>
+                        <td>Реализация с использованием сертификата</td>
+                        <td>Подтверждена для ПФ</td>
+                        <td>Действия</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>3</td>
+                        <td>«Юные исследователи» (отдел ОЗП)</td>
+                        <td><button class="gray-button">Архив</button></td>
+                        <td>Не заключён</td>
+                        <td>Не заключён</td>
+                        <td>
+                            <div>
+                                <img src="../images/eye.svg" alt="eye">
+                                <img src="../images/pencil_with_line.svg" alt="pencil_with_line">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>«Детская фитнес-аэробика» (отдел ОЗП)</td>
+                        <td><button class="green-button">Опубликовано</button></td>
+                        <td>Не заключён</td>
+                        <td>Не заключён</td>
+                        <td>
+                            <div>
+                                <img src="../images/eye.svg" alt="eye">
+                                <img src="../images/pencil_with_line.svg" alt="pencil_with_line">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>011</td>
+                        <td>Дополнительная общеобразовательная общеразвивающая программа социально-гуманитарной направленности для летней онлайн-площадки «Летнее движение школьника: образовательный upgrade» (отдел ЦВР) </td>
+                        <td><button class="gray-button">Архив</button></td>
+                        <td>Не заключён</td>
+                        <td>Не заключён</td>
+                        <td>
+                            <div>
+                                <img src="../images/eye.svg" alt="eye">
+                                <img src="../images/pencil_with_line.svg" alt="pencil_with_line">
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+    </div>
+
+
+
+        </div>
+    </div>
+</section>
+<footer>
+    <div class="container-max-width">
+        <div class="logo_footer">
+            <a href="#" class="logo_img">
+                <img src="../images/logo_blue.svg">
+                <div class="logo_footer_text">
+                    <p>Навигатор дополнительного образования</p>
+                    <p>Оренбургской области</p>
+                </div>
+            </a>
+        </div>
+
+        <a href="#" class="with_underline">©️Министерство образования Оренбургской области, 2024</a>
+    </div>
+</footer>
+
+</body>
+
+<script src="../libs/bootstrap/bootstrap-wysihtml5/bootstrap-wysihtml5-0.0.2.min.js"></script>
+<script src="../libs/bootstrap/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+<script src="../libs/bootstrap/bootstrap-select/js/bootstrap-select.js"></script>
+</html>

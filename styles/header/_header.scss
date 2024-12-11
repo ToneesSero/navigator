@@ -166,31 +166,76 @@ header{
   box-shadow: $basic_shadow;
   top: 90%;
   right: -10%;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
   z-index: 1;
   padding: 0px 24px;
   padding-bottom: 20px;
   padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 
-  .icons{
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
     .icon{
+      padding: 8px 14px;
+      border-radius: 6px;
       display: flex;
       gap: 16px;
+      cursor: pointer;
       img{
         height: 24px;
         width: 24px;
       }
+      p{
+        color: $text !important;
+      }
+      &.active{
+        img{
+          filter:brightness(0) saturate(100%) invert(13%) sepia(96%) saturate(3406%) hue-rotate(214deg) brightness(92%) contrast(102%);
+        }
+        p{
+          color: $link !important;
+        }
+      }
+      &:hover{
+        background: rgba(241, 246, 251, 1);
+        img{
+          filter: brightness(0) saturate(100%) invert(23%) sepia(65%) saturate(3360%) hue-rotate(203deg) brightness(96%) contrast(101%);
+        }
+        p{
+          color: $accent !important;
+        }
+      }
+    }
+    .icon.home{
+      border-bottom: 1px solid $surface;
+      //padding-bottom: 15px;
+    }
+    .icon.exit{
+      //padding-top: 15px;
+      border-top: 1px solid $surface;
+    }
+}
+.menu-logged.show.show{
+  height: max-content;
+  visibility: visible !important;
+  position: unset;
+  background: $white;
+  border-radius: 6px;
+  padding: 25px 20px;
+  .icons{
+    .icon{
+
     }
   }
 }
-
 .logo_menu_el.logged{
+  .arr{
+    transition: .4s ease-in-out;
+  }
   &:hover{
+    .arr{
+      rotate: 180deg;
+      transition: .4s ease-in-out;
+    }
     .menu-logged{
       visibility: visible;
     }

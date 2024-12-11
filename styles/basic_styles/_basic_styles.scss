@@ -50,19 +50,74 @@ a{
   cursor: pointer;
   text-decoration: none;
   color: $link;
+  &:hover{
+    text-decoration: none;
+  }
   &.with_underline{
     text-decoration: underline;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+}
+
+.contacts-us-elements{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  .contacts-us-el{
+    cursor: pointer;
+    background: $white;
+    border-radius: 6px;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform .4s ease-in-out;
+    .contacts-us-el-text{
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+    &:hover{
+      transform: translateX(20px);
+      transition: transform .4s ease-in-out;
+    }
   }
 }
 
 button{
   cursor: pointer;
   border-radius: 8px;
-  padding: 15px 20px;
+  padding: 10px 20px;
+  &.img{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  &.standart-button{
+    background: $white;
+    color: black;
+  }
+  &.green-button{
+    background: rgba(219, 241, 219, 1);
+    color:rgba(33, 92, 33, 1);
+  }
+  &.grey-button{
+    background: rgba(225, 231, 248, 1);
+    color: rgba(78, 95, 146, 1);
+  }
+  &.yellow-button{
+    background: rgba(245, 239, 213, 1);
+    color: rgba(113, 92, 15, 1);
+  }
+  &.red-button{
+    background: rgba(255, 232, 233, 1);
+    color: rgba(144, 16, 21, 1);
+  }
   &.blue-button{
     background: $accent;
     color: $white;
-  //  todo: проверить соответствие цветов
   }
   &.white-button{
     background: $white;
@@ -171,7 +226,11 @@ button{
     }
   }
 }
-
+.breadcrumbs{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
 .block{
   padding: 24px 14px;
   display: flex;
@@ -197,9 +256,9 @@ button{
       color: $subtext;
     }
     .desc{
-      width: 60%;
+      width: 100%;
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 300px 1fr;
       gap: 15px;
       .field{
         color: $subtext;

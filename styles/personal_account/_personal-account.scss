@@ -40,7 +40,7 @@
     }
     &:hover{
       img{
-        filter:  invert(15%) sepia(78%) saturate(4038%) hue-rotate(214deg) brightness(78%) contrast(102%);
+        filter:  brightness(0) saturate(100%) invert(13%) sepia(96%) saturate(3406%) hue-rotate(214deg) brightness(92%) contrast(102%);
       }
     }
   }

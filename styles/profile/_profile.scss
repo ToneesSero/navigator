@@ -1,0 +1,40 @@
+.profile{
+  background: rgba(243, 245, 251, 1);
+  display: flex;
+  justify-content: center;
+  .container-max-width{
+    padding: 80px 0;
+    display: flex;
+    gap: 24px;
+    .menu-logged{
+      width: 30%;
+    }
+    .profile-container{
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      h5{
+        padding-bottom: 15px;
+        border-bottom: 1px solid $surface;
+      }
+      .but{
+        display: flex;
+        justify-content: end;
+      }
+      .blocks{
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        .block{
+          background: $white;
+          .block_head{
+            img{
+              width: 30px;
+              height: 25px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

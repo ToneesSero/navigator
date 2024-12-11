@@ -1,0 +1,106 @@
+.declarations{
+  background: rgba(243, 245, 251, 1);
+  display: flex;
+  justify-content: center;
+  .container-max-width{
+    padding: 80px 0;
+    display: flex;
+    gap: 24px;
+    .menu-logged{
+      width: 30%;
+    }
+    .declarations-container{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    .create_decl{
+      display: flex;
+      justify-content: space-between;
+      background: $white;
+      align-items: center;
+      padding: 20px 24px;
+      border-radius: 6px;
+    }
+    .helper_info{
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: $bg_main;
+      padding: 16px;
+      border-radius: 6px;
+      transform: translateX(5px);
+      box-shadow: inset 3px 0 0 rgba(0, 60, 160, 1);
+      p{
+        color: $subtext;
+      }
+      div{
+        display: flex;
+        gap: 16px;
+      }
+      .circle{
+        cursor: pointer;
+      }
+    }
+    .filters_decl{
+      background: $white;
+      border-radius: 6px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      padding: 24px;
+      .filters_decl_body{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 18px;
+        .filter_decl_el{
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+          &.buttons{
+            display: flex;
+            flex-direction: row;
+            align-self: flex-end;
+            gap: 18px;
+          }
+        }
+      }
+    }
+    .table{
+      background: $white;
+      width: 100%;
+      table{
+        thead{
+          td{
+            font-family: GolosText-SemiBold;
+            border: none;
+            word-break: break-word;
+          }
+        }
+        tbody{
+          td{
+            font-weight: 500;
+            button{
+              cursor: unset;
+            }
+            &:nth-child(2){
+              vertical-align: middle;
+            }
+            &:last-child{
+              vertical-align: middle;
+              div{
+                height: 100%;
+                align-items: center;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+              };
+            }
+          }
+        }
+      }
+    }
+  }
+}

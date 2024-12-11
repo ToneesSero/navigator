@@ -175,6 +175,26 @@ input{
     border: 1px solid $error;
   }
 }
+input[type="date"]{
+  -webkit-appearance: none;
+  appearance: none;
+  position: relative;
+  &:after{
+    content: "";
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    background-image: url("../../images/calendar_with_clocks.svg") ;
+    background-repeat: no-repeat;
+    background-size: contain;
+    right: 3%;
+    top:50%;
+    transform: translateY(-50%);
+  }
+  &::-webkit-calendar-picker-indicator {
+    opacity: 0;
+  }
+}
 
 
 
