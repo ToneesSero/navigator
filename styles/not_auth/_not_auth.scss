@@ -14,11 +14,22 @@ p{
     gap: 25px;
     grid-template-columns: repeat(3, minmax(200px, 1fr));
     .block_cert{
-      // todo: Сделать тень
+      &:first-child{
+        background-image: url("../../images/bg_card_what_is_cert_1.jpg");
+      }
+      &:nth-child(2){
+        background-image: url("../../images/bg_card_what_is_cert_2.jpg");
+      }
+      &:last-child{
+        background-image: url("../../images/bg_card_what_is_cert_3.jpg");
+      }
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      box-shadow: $basic_shadow;
       cursor: pointer;
       min-height: 200px;
       border-radius: 8px;
-      background: $white;
       padding: 32px;
       transition: transform .4s ease-in-out;
       h4{
@@ -51,7 +62,7 @@ p{
       gap: 24px;
 
       .direction{
-        background: $gradient;
+        cursor: pointer;
         min-height: 200px;
         padding: 28px 32px;
         border-radius: 8px;
@@ -61,10 +72,31 @@ p{
           color: $white;
           font-size: 18px;
         }
+        background-repeat: no-repeat;
+        background-size: cover;
+        &:nth-child(1){
+          background-image: url("../../images/direction_bg/direction_1.png");
+        }
+        &:nth-child(2){
+          background-image: url("../../images/direction_bg/direction_2.png");
+        }
+        &:nth-child(3){
+          background-image: url("../../images/direction_bg/direction_3.png");
+        }
+        &:nth-child(4){
+          background-image: url("../../images/direction_bg/direction_4.png");
+        }
+        &:nth-child(5){
+          background-image: url("../../images/direction_bg/direction_5.png");
+        }
+        &:nth-child(6){
+          background-image: url("../../images/direction_bg/direction_6.png");
+        }
       }
     }
 
     .sign-in-dopedu{
+      position: relative;
       background: $gradient;
       display: flex;
       flex-direction: column;
@@ -82,6 +114,11 @@ p{
         padding: 10px 20px;
         border-radius: 6px;
         font-size: 16px;
+      }
+      img{
+        position: absolute;
+        right: 0;
+        bottom: 0;
       }
     }
 
